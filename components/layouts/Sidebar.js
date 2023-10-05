@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition, Menu } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -48,6 +48,9 @@ export default function Example({children}) {
   const [open, setOpen] = useState(false)
   const { data: session, status } = useSession();
   const router = useRouter();
+  
+    useEffect(() => {
+    }, [session]);
 
   if (status === "loading") {
     return <Skeleton count={1} height={40} />;
