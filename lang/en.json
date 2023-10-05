@@ -7,6 +7,10 @@
         "Nuestras_Funciones": "Our new features.",
         "Ganas_De": "Do you want to see new places, but don't have anyone with you? Meet someone to accompany you on your adventure.",
         "Nmad_Te": "Nmad offers you unforgettable experiences on a low budget."
+    },
+    "LoginBtn": {
+        "inicio": "Start",
+        "iniciar": "Login with Google"
     }
 }
 
