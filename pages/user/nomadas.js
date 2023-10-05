@@ -48,10 +48,10 @@ export default function Nomadas() {
    <div className="relative flex"> 
     <div class="w-full h-60 bg-orange-400"></div>
     <p class="absolute top-4 sm:top-4 left-24 sm:left-64 right-0 bottom-0   text-gray-500 text-sm sm:text-xl font-semibold">Porque viajar conmigo?</p> 
-    <p class="absolute top-12 sm:top-16 left-6 sm:left-32 lg:left right-0 bottom-0  text-black text-[7.5px] sm:text-xs font-semibold">Ademas de mi amistad y de mi basto conocimiento en los lugares de jalisco te ofrezco:</p> 
-    <img src="/imgNomadas/ViajeSeguro.jpg" alt="viaje seguro" class=" w-8 sm:w-12 h-8 sm:h-12 absolute top-20 sm:top-24 left-10 sm:left-28 rounded-full " />
-    <img src="/imgNomadas/des.png" alt="descubre" class=" w-8 sm:w-12 h-8 sm:h-12 absolute top-16 sm:top-24 left-36 sm:left-[350px] rounded-full " />
-    <img src="/imgNomadas/multiple.jpg" alt="descubre" class=" w-8 sm:w-12 h-8 sm:h-12 absolute top-16 sm:top-24 left-64 sm:left-[585px] rounded-full " />
+    <p class="absolute top-12 sm:top-16 lg:top-12 left-6 sm:left-32 lg:left right-0 bottom-0  text-black text-[7.5px] sm:text-xs font-semibold">Ademas de mi amistad y de mi basto conocimiento en los lugares de jalisco te ofrezco:</p> 
+    <img src="/imgNomadas/ViajeSeguro.jpg" alt="viaje seguro" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-20 sm:top-24 lg:top-[80px] left-10 sm:left-28 lg:left-20 rounded-full " />
+    <img src="/imgNomadas/des.png" alt="descubre" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-16 sm:top-24 lg:top-[80px] left-36 sm:left-[350px] lg:left-80 rounded-full " />
+    <img src="/imgNomadas/multiple.jpg" alt="descubre" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-16 sm:top-24 lg:top-[80px] left-64 sm:left-[585px] lg:left-[] rounded-full " />
     <p class="absolute top-28 sm:top-40 left-8 sm:left-24 right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">VIAJE SEGURO</p>
     <p class="absolute top-32 sm:top-[180px] left-4 sm:left-12 right-0 bottom-0 pr-60 sm:pr-[500px]  text-gray-500 text-[5px] sm:text-[7px] font-semibold text-center">Soy una persona de confianza,mis resenas pueden ayudarte a darte una idea, ademas no hay tarifas elevadas por ser turista, a un amigo no le cobraria de mas</p>
     <p class="absolute top-28 sm:top-[160px] left-36 sm:left-[350px] right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">DESCUBRE </p>
