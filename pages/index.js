@@ -235,7 +235,6 @@ export default function Example() {
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 Viaja al precio mas bajo y haz amigos en cada destino
                 </h1>
-                <LenguageSelector />
                 <p className="mt-6 text-lg leading-8 text-gray-300">
                 Transforma tus viajes en experiencias inolvidables al conectar nómadas digitales con locales: evita impuestos y forja amistades por todo el mundo
                 </p>
