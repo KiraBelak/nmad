@@ -4,6 +4,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { set } from 'date-fns';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
+
 
 function LocationMap() {
   const [city, setCity] = useState('');
@@ -79,9 +81,14 @@ getExp();
   return (
     <div className='h-screen w-full box-border pb-16 lg:pb-0 '>
     
-      {location.latitude !== 0 && location.longitude !== 0 && experiencias.length > 0 &&(
+      {location.latitude !== 0 && location.longitude !== 0 && experiencias.length > 0 ?(
         <Map latitude={location.latitude} longitude={location.longitude} experiencias={experiencias} />
-      )}
+      ) : (
+       <Skeleton height={500} className='bg-black' />
+       
+      )
+    
+    }
     </div>
   );
 }

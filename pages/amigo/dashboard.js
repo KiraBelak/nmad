@@ -33,10 +33,13 @@ function Dashboard() {
         .get("/api/exp")
         .then((res) => {
           const data = res.data.data;
+          console.log(data);
+
           //tomar las experiencias del usuario
           const exp = data.filter((e) => e.email === session.user.email);
-
           console.log(exp);
+
+          // console.log(exp);
 
           setExperiencias(exp);
         })
@@ -56,7 +59,7 @@ function Dashboard() {
                 title.trim() === "" ||
                 descripcion.trim() === "" ||
                 categoria.trim() === "" ||
-                ubicacion.trim() === ""
+                ubicacion.length === 0
             ) {
                 toast.error("Todos los campos son obligatorios");
                 return;
@@ -86,10 +89,13 @@ function Dashboard() {
 
             }).catch((err) => {
                 setLoad(false);
+                console.log(err);
                 toast.error("Error al crear la experiencia");
             });
 
         } catch (error) {
+            console.log(error);
+            setLoad(false);
             toast.error("Error al crear la experiencia");
         }
     };
@@ -262,6 +268,50 @@ function Dashboard() {
       >
         Crear nueva experiencia
       </button>
+
+      {/* mostrar las experiencias del usuario */}
+      {experiencias.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+          {experiencias.map((expi) => (
+            expi.exp.length > 0 && expi.exp.map((exp) => (
+              <div
+              key={exp.id}
+              className="bg-gray-800 text-black rounded-lg shadow-lg overflow-hidden"
+            >
+              <img
+                className="w-full h-56 object-cover object-center"
+                src={exp.imagen}
+                alt={exp.title}
+              />
+
+              <div className="p-4">
+                <h2 className="font-bold text-2xl text-white">
+                  {exp.titulo}
+                </h2>
+                <p className="text-gray-300 mt-2">{exp.descripcion}</p>
+              </div>
+            </div>
+            ))
+            
+          ))}
+        </div>
+      ) : (
+        <div className="mt-4">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="p-4">
+              <h2 className="font-bold text-2xl text-gray-800">
+                No tienes experiencias
+              </h2>
+              <p className="text-gray-600 mt-2">
+                Crea una nueva experiencia
+              </p>
+            </div>
+          </div>
+        </div>
+      )
+
+      }
+
     </SideBar>
   );
 }
