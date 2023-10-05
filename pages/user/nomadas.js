@@ -13,7 +13,7 @@ export default function Nomadas() {
         <div className="relative">
         <img src="/imgNomadas/tequila.jpg" alt="" class="w-full" />
         <img src="/imgNomadas/edgar.jpg" alt="" class=" w-28 h-28 sm: w-52 sm:h-52  absolute top-10 sm:top-28 left-52 sm:left-2/3 lg:left-[440px] rounded-md" />
-        <p class="absolute bottom-24 sm:bottom-52 lg:bottom-38 left-5 sm:left-12 lg:left-8 text-2xl sm:text-5xl lg:text-5xl text-black hover:text-red-400  px-2 py-1">Tequila Jalisco</p>    
+        <p class="absolute bottom-24 sm:bottom-52 lg:bottom-38 left-5 sm:left-12 lg:left-8 text-2xl sm:text-5xl lg:text-5xl text-red-400  px-2 py-1">Tequila Jalisco</p>    
         <p class="absolute bottom-4 sm:bottom-10 lg:bottom-6 left-52 sm:left-2/3 lg:left-[440px] text-base sm:text-3xl text-orange-200 bg-gradient-to-r from-orange-600  px-2 py-1 font-bold">Edgar Robles</p>   
          <p class= "absolute bottom-12 sm:bottom-24 lg:bottom-14 left-3 text-[7px] sm:text-base text-white  px-2 py-1 pr-32 sm:pr-64 ">Descubre la esencia de México en Tequila, Jalisco,
           donde la cultura del tequila cobra vida entre majestuosos campos de agave azul.
@@ -50,14 +50,14 @@ export default function Nomadas() {
     <p class="absolute top-4 sm:top-4 left-24 sm:left-64 right-0 bottom-0   text-gray-500 text-sm sm:text-xl font-semibold">Porque viajar conmigo?</p> 
     <p class="absolute top-12 sm:top-16 lg:top-12 left-6 sm:left-32 lg:left right-0 bottom-0  text-black text-[7.5px] sm:text-xs font-semibold">Ademas de mi amistad y de mi basto conocimiento en los lugares de jalisco te ofrezco:</p> 
     <img src="/imgNomadas/ViajeSeguro.jpg" alt="viaje seguro" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-20 sm:top-24 lg:top-[80px] left-10 sm:left-28 lg:left-20 rounded-full " />
-    <img src="/imgNomadas/des.png" alt="descubre" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-16 sm:top-24 lg:top-[80px] left-36 sm:left-[350px] lg:left-80 rounded-full " />
-    <img src="/imgNomadas/multiple.jpg" alt="descubre" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-16 sm:top-24 lg:top-[80px] left-64 sm:left-[585px] lg:left-[] rounded-full " />
-    <p class="absolute top-28 sm:top-40 left-8 sm:left-24 right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">VIAJE SEGURO</p>
+    <img src="/imgNomadas/des.png" alt="descubre" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-16 sm:top-24 lg:top-[80px] left-36 sm:left-[350px] lg:left-[320px] rounded-full " />
+    <img src="/imgNomadas/multiple.jpg" alt="descubre" class=" w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 absolute top-16 sm:top-24 lg:top-[80px] left-64 sm:left-[585px] lg:left-[530px] rounded-full " />
+    <p class="absolute top-28 sm:top-40 left-8 sm:left-24 lg:left-20 right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">VIAJE SEGURO</p>
     <p class="absolute top-32 sm:top-[180px] left-4 sm:left-12 right-0 bottom-0 pr-60 sm:pr-[500px]  text-gray-500 text-[5px] sm:text-[7px] font-semibold text-center">Soy una persona de confianza,mis resenas pueden ayudarte a darte una idea, ademas no hay tarifas elevadas por ser turista, a un amigo no le cobraria de mas</p>
-    <p class="absolute top-28 sm:top-[160px] left-36 sm:left-[350px] right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">DESCUBRE </p>
+    <p class="absolute top-28 sm:top-[160px] left-36 sm:left-[350px] lg:left-[325px] right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">DESCUBRE </p>
     <p class="absolute top-32 sm:top-[180px] left-32 sm:left-[270px] right-0 bottom-0 pr-36 sm:pr-[250px] text-gray-500 text-[5px] sm:text-[7px] font-semibold text-center">Soy una persona de confianza,mis resenas pueden ayudarte a darte una idea, ademas no hay tarifas elevadas por ser turista, a un amigo no le cobraria de mas</p>
-    <p class="absolute top-28 sm:top-[160px] left-60 sm:left-[560px] right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">MULTIPLE DESTINOS </p>
-    <p class="absolute top-32 sm:top-[180px] left-56 sm:left-[520px] right-0 bottom-0 pr-7 text-gray-500 text-[5px] sm:text-[7px] font-semibold text-center">Soy una persona que lleva muchos anos viviendo en jalisco,y puedo darte multiples experiencias dependiendo el destinos que te gustaria conocer.</p>
+    <p class="absolute top-28 sm:top-[160px] left-60 sm:left-[560px] lg:left-[515px] right-0 bottom-0   text-black text-[7.5px] sm:text-[10px] font-semibold">MULTIPLE DESTINOS </p>
+    <p class="absolute top-32 sm:top-[180px] left-56 sm:left-[480px] right-0 bottom-0 pr-7 text-gray-500 text-[5px] sm:text-[7px] font-semibold text-center">Soy una persona que lleva muchos anos viviendo en jalisco,y puedo darte multiples experiencias dependiendo el destinos que te gustaria conocer.</p>
     </div>
 
     <div className="relative">
@@ -74,7 +74,7 @@ export default function Nomadas() {
 
     <div className="relative">
     <div class="w-full h-48 sm:h-72 bg-amber-50">
-    <div class="absolute bottom-6  left-60 sm:left-[490px] w-20 sm:w-48 h-32 sm:h-60 bg-amber-100">
+    <div class="absolute bottom-6  left-60 sm:left-[490px] lg:left-[450px] w-20 sm:w-48 h-32 sm:h-60 bg-amber-100">
     <p class= "absolute bottom-12 sm:bottom-20 left-4 sm:left-14 text-[5px] sm:text-[10px] text-orange-500 px-2 py-1 text-center pr-2 font-bold ">CENTRO GDL</p>
     <img src="/imgNomadas/centroGDL.jpg" alt="" class=" w-16 sm:w-44 h-14 sm:h-32 absolute top-2 left-2" />
     <p class= "absolute bottom-4 sm:bottom-8 left-0 text-[5px] sm:text-[10px] text-orange-500 px-2 py-1 text-center pr-2 ">Tomemos un recorrido por el centro de guadalaja y aprendamos de su arquitectura y comida tipica.</p>
@@ -83,7 +83,7 @@ export default function Nomadas() {
          Mas info
          </button>
     </div>
-    <div class="absolute bottom-6 left-32 sm:left-[260px] w-20 sm:w-48 h-32 sm:h-60  bg-amber-100">
+    <div class="absolute bottom-6 left-32 sm:left-[260px] lg:left-[243px] w-20 sm:w-48 h-32 sm:h-60  bg-amber-100">
     <p class= "absolute bottom-12 sm:bottom-20 left-2 sm:left-[38px] text-[5px] sm:text-[10px] text-orange-500 px-2 py-1 text-center pr-2 font-bold ">PUERTO VALLARTA</p>
     <img src="/imgNomadas/PlayaVallarta.jpg" alt="" class=" w-16 sm:w-44 h-14 sm:h-32 absolute top-2 left-2" />
     <p class= "absolute bottom-4 sm:bottom-8 left-0 text-[5px] sm:text-[10px] text-orange-500 px-2 py-1 text-center pr-2 ">Puedo llevarte a conocer la refrescante y tropical costa de puerto vallarta como local </p>
