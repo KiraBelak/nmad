@@ -9,6 +9,7 @@ import {
   HomeIcon,
   UsersIcon,
   XMarkIcon,
+  
 } from '@heroicons/react/24/outline'
 import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
@@ -28,13 +29,14 @@ const navigation = [
   { name: 'Inicio', href: '/user/dashboard', icon: HomeIcon, current: true },
   { name: 'Amigos Locales', href:'/user/nomadas', icon: UsersIcon, current: false },
   { name: 'Experiencias', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendario', href: '#', icon: CalendarIcon, current: false }, //nombres de las categorias
+  {name: 'Descarga', href: '/user/descarga', icon: DocumentDuplicateIcon, current: false},
+  // { name: 'Calendario', href: '#', icon: CalendarIcon, current: false }, //nombres de las categorias
 
 ]
 const teams = [
-  { id: 1, name: 'Edgar Robles', href: '#', initial: 'H', current: false },
-  { id: 2, name: 'Andres Lopez', href: '#', initial: 'T', current: false },
-  { id: 3, name: 'Gabriela Sanchez', href: '#', initial: 'W', current: false }, //nombres de nomadas 
+  // { id: 1, name: 'Edgar Robles', href: '#', initial: 'H', current: false },
+  // { id: 2, name: 'Andres Lopez', href: '#', initial: 'T', current: false },
+  // { id: 3, name: 'Gabriela Sanchez', href: '#', initial: 'W', current: false }, //nombres de nomadas 
 ]
 
 function classNames(...classes) {
