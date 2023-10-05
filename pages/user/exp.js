@@ -51,12 +51,12 @@ export default function Exp() {
 
             <a
               href="/tu-enlace4"
-              class="relative bottom-52 left-72 sm:left-60 w-52 sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-52 left-72 sm:left-64  w-52 sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/Laguna.jpg"
                 alt=""
-                class="w-full h-44 sm:h-60  rounded-xl"
+                class="w-full h-44 sm:h-60 sm:w-full rounded-xl"
               />
               <p class="absolute bottom-12 left-3 text-sm text-white px-2 py-1 font-bold">
                 <div id="linea" class="w-32 h-1 bg-white"></div>
@@ -96,7 +96,7 @@ export default function Exp() {
 
             <a
               href="/tu-enlace1"
-              class="relative bottom-[655px] left-72 sm:left-60 w-52  sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-[655px] left-72 sm:left-64 w-52  sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/ESTADIO2.jpg"
