@@ -2,7 +2,7 @@
     "Prueba1": {
         "title": "Test page 1, wow, why are you checking the commits?"
     },
-    "home": {
+    "index": {
         "welcome": "Welcome to Next.js"
     }
 }

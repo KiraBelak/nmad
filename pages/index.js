@@ -11,7 +11,7 @@ import {
   ServerIcon,
 } from '@heroicons/react/20/solid'
 import LoginBtn from '@/components/LoginBtn'
-import LenguageSelector from '@/components/LenguageSelector'
+import LenguageSelector from '../components/LenguageSelector'
 
 const navigation = [
   // { name: 'Product', href: '#' },
@@ -117,7 +117,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Example(props) {
+  const { index } = props;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -563,4 +564,15 @@ export default function Example() {
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  const response = await import(`../lang/${locale}.json`)
+  // console.log(response.default.Prueba1);
+
+  return {
+      props: {
+          index: response.default.index,
+      }
+  }
 }
