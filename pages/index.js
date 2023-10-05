@@ -14,10 +14,10 @@ import LoginBtn from '@/components/LoginBtn'
 import LenguageSelector from '../components/LenguageSelector'
 
 const navigation = [
-  // { name: 'Product', href: '#' },
-  // { name: 'Features', href: '#' },
-  // { name: 'Marketplace', href: '#' },
-  // { name: 'Company', href: '#' },
+  //  { name: 'Conocenos Nomas', href: '#' },
+  //  { name: 'Amigo en cualquier lugar', href: '#' },
+  //  { name: 'Conoce ese lugar especial', href: '#' },
+  //  { name: 'Busqueda de lugares', href: '#' },
 ]
 const features = [
   {
@@ -234,10 +234,14 @@ export default function Example(props) {
               </div>
               <div className="text-center">
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Viaja al precio mas bajo y haz amigos en cada destino
+                  Encuentra amigos en cada destino
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                Transforma tus viajes en experiencias inolvidables al conectar nómadas digitales con locales: evita impuestos y forja amistades por todo el mundo
+                  ¿Ganas de conocer lugares nuevos, pero no tienes con quien? Conoce a alguien que te acompañe en tu
+                  aventura.
+                  <br />
+                  Nmad te ofrece experiencias inonlvidables con bajo presupuesto.
+                
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <LoginBtn/>
@@ -265,7 +269,7 @@ export default function Example(props) {
         </div>
 
         {/* Feature section */}
-        <div className="mt-32 sm:mt-56">
+        {/* <div className="mt-32 sm:mt-56">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
               <h2 className="text-base font-semibold leading-7 text-indigo-600">Everything you need</h2>
@@ -303,10 +307,10 @@ export default function Example(props) {
               ))}
             </dl>
           </div>
-        </div>
+        </div> */}
 
         {/* Testimonial section */}
-        <div className="relative z-10 mt-32 bg-gray-900 pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
+        {/* <div className="relative z-10 mt-32 bg-gray-900 pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
               <div
@@ -356,10 +360,10 @@ export default function Example(props) {
               </figure>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Pricing section */}
-        <div className="relative isolate mt-32 bg-white px-6 sm:mt-56 lg:px-8">
+        {/* <div className="relative isolate mt-32 bg-white px-6 sm:mt-56 lg:px-8">
           <div
             className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
             aria-hidden="true"
@@ -458,10 +462,10 @@ export default function Example(props) {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* FAQ section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
+        {/* <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
           <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
             <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
             <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
@@ -490,11 +494,11 @@ export default function Example(props) {
               ))}
             </dl>
           </div>
-        </div>
+        </div> */}
       </main>
 
       {/* Footer */}
-      <footer className="mt-32 bg-gray-900 sm:mt-56" aria-labelledby="footer-heading">
+      {/* <footer className="mt-32 bg-gray-900 sm:mt-56" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
@@ -561,7 +565,7 @@ export default function Example(props) {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }
