@@ -41,7 +41,7 @@ export default function Exp() {
 
 <div className="relative flex flex-col items-center justify-center bg-[url('/imgExp/portadaExp.jpg')] no-repeat center center bg-cover w-full h-[500px]">
   <div className="w-full h-[600px] bg-white">
-    <a href="/tu-enlace3" className="relative top-8 left-14 sm:left-8 w-52 sm:w-38 h-60 rounded-xl bg-red-100 block no-underline">
+    <a href="/tu-enlace3" className="relative top-8 left-14 sm:left-4 w-52 sm:w-38 h-60 rounded-xl bg-red-100 block no-underline">
       <img src="/imgExp/sanCarlos.jpg" alt="" className="w-full h-44 sm:h-60 rounded-xl" />
       <p className="absolute bottom-8 left-3 text-sm text-white px-2 py-1 font-bold">
         <div className="w-32 h-1 bg-white"></div>
@@ -51,12 +51,12 @@ export default function Exp() {
 
             <a
               href="/tu-enlace4"
-              class="relative bottom-52 left-72 sm:left-64 w-52 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-52 left-72 sm:left-64  w-52 sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/Laguna.jpg"
                 alt=""
-                class="w-full h-44 sm:h-60 rounded-xl"
+                class="w-full h-44 sm:h-60 sm:w-full rounded-xl"
               />
               <p class="absolute bottom-12 left-3 text-sm text-white px-2 py-1 font-bold">
                 <div id="linea" class="w-32 h-1 bg-white"></div>
@@ -96,7 +96,7 @@ export default function Exp() {
 
             <a
               href="/tu-enlace1"
-              class="relative bottom-[655px] left-72 sm:left-64 w-52 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-[655px] left-72 sm:left-64 w-52  sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/ESTADIO2.jpg"
@@ -111,7 +111,7 @@ export default function Exp() {
 
             <a
               href="/tu-enlace2"
-              class="relative bottom-[895px] left-14 sm:left-8 w-52 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-[895px] left-14 sm:left-4 w-52 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/GALICIA.jpg"
@@ -132,7 +132,7 @@ export default function Exp() {
           MUSEO SONORA REVOLUCION
                 <div id="linea" class="w-60 h-1 bg-white"></div>
               </p>
-              <p class="absolute bottom-24 sm:bottom-10 left-[330px] text-lg text-white px-10 py-6 sm:text-[13px] md:text-[2px]">
+              <p class="absolute bottom-24 sm:bottom-10 left-[330px] text-lg text-white px-10 py-6 sm:text-[13px] md:text-[13px]">
               Este museo te invita a explorar la apasionante historia de la Revolución Mexicana. A través de una valiosa colección de piezas históricas resguardadas por descendientes del General Álvaro Obregón, podrás sumergirte en este período crucial de la historia de México.
 
 Cada objeto en exhibición cuenta una historia única, desde armas de la época hasta documentos originales y objetos personales de figuras destacadas. Estas piezas te llevarán al contexto histórico de la Revolución, permitiéndote comprender las luchas y los logros de quienes participaron en ella.
@@ -158,20 +158,20 @@ Descubre una experiencia enriquecedora que te conectará con el pasado y te perm
     <img
         src="/imgExp/imagen1.jpg"
         alt=""
-        class=" w-24 h-24 absolute left-[530px] bottom-44 rounded-s-full"
+        class=" w-24 h-24 absolute left-[460px] bottom-44 rounded-s-full"
             />
-    <p class="absolute bottom-32 left-[518px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
+    <button class="absolute bottom-32 left-[450px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
      Jaime Sánchez
-    </p>
+    </button>
 
     <img
         src="/imgExp/imagen2.jpg"
         alt=""
-        class=" w-24 h-24 absolute left-[530px] bottom-[370px] rounded-s-full"
+        class=" w-24 h-24 absolute left-[460px] bottom-[370px] rounded-s-full"
             />
-    <p class="absolute bottom-[310px] left-[520px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
+    <button class="absolute bottom-[310px] left-[450px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
      Jaime Sánchez
-    </p> 
+    </button> 
           </div>
           <div class=" w-80 h-96 pl-10 bg-[#CCFFE5] ">
           </div>
