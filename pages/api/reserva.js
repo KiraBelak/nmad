@@ -53,7 +53,7 @@ export default async function handler(req, res) {
         case "POST":
             try {
 
-               console.log(body);
+            //    console.log(body);
 
                //crear un dato en la coleccion
                 const data = await reserva.insertOne({
