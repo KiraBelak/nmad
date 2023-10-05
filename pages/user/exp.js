@@ -136,8 +136,22 @@ Descubre una experiencia enriquecedora que te conectará con el pasado y te perm
         </div>
  
         <div className="relative flex flex-col items-center justify-center">
-          <div class="w-full h-[600px] bg-[#ffffff]">
-          <div class="w-80 h-96 bottom  bg-[#CCFFE5] ">
+          <div class="w-full h-[600px] bg-[#ffffff] flex items-center justify-around pl-4 ">
+            <p class ="absolute bottom-10 sm:bottom-72 left-0 sm:left-16 text-1xl text-white px-2 py-1 font-bold" </p>
+          <div class=" w-80 h-96 bg-[#CCFFE5] ">
+          <p class="absolute bottom-10 sm:bottom-72 left-0 sm:left-16 text-1xl text-white px-2 py-1 font-bold">
+      MUSEO SONORA REVOLUCION
+      <div id="linea" class="w-60 h-1 bg-white"></div>
+    </p>
+    <p class="absolute bottom-0 sm:bottom-24 left-0 sm:left-[330px] text-xs sm:text-base text-white px-2 sm:px-10 py-6">
+      Este museo te invita a explorar la apasionante historia de la Revolución Mexicana. A través de una valiosa colección de piezas históricas resguardadas por descendientes del General Álvaro Obregón, podrás sumergirte en este período crucial de la historia de México.
+
+      Cada objeto en exhibición cuenta una historia única, desde armas de la época hasta documentos originales y objetos personales de figuras destacadas. Estas piezas te llevarán al contexto histórico de la Revolución, permitiéndote comprender las luchas y los logros de quienes participaron en ella.
+
+      Descubre una experiencia enriquecedora que te conectará con el pasado y te permitirá apreciar la rica herencia cultural de la Revolución Mexicana a través de estas valiosas reliquias.
+    </p>
+          </div>
+          <div class=" w-80 h-96 pl-10 bg-[#CCFFE5] ">
           </div>
           </div>
         </div>
