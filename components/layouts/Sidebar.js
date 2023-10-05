@@ -23,17 +23,16 @@ import Link from "next/link";
 
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+  { name: 'Inicio', href: '#', icon: HomeIcon, current: true },
+  { name: 'Nomadas', href:'/user/exp/', icon: UsersIcon, current: false },
+  { name: 'Experiencias', href: '#', icon: FolderIcon, current: false },
+  { name: 'Calendario', href: '#', icon: CalendarIcon, current: false }, //nombres de las categorias
+
 ]
 const teams = [
-  { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-  { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-  { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+  { id: 1, name: 'Edgar Robles', href: '#', initial: 'H', current: false },
+  { id: 2, name: 'Andres Lopez', href: '#', initial: 'T', current: false },
+  { id: 3, name: 'Gabriela Sanchez', href: '#', initial: 'W', current: false }, //nombres de nomadas 
 ]
 
 function classNames(...classes) {
@@ -150,7 +149,7 @@ export default function Example({children}) {
                           </ul>
                         </li>
                         <li>
-                          <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+                          <div className="text-xs font-semibold leading-6 text-white">Tus Nomadas</div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
                             {teams.map((team) => (
                               <li key={team.name}>
@@ -215,7 +214,7 @@ export default function Example({children}) {
                   </ul>
                 </li>
                 <li>
-                  <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+                  <div className="text-xs font-semibold leading-6 text-gray-400">Tus Nomadas</div>
                   <ul role="list" className="-mx-2 mt-2 space-y-1">
                     {teams.map((team) => (
                       <li key={team.name}>
@@ -247,8 +246,8 @@ export default function Example({children}) {
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
-                    <span className="sr-only">Your profile</span>
-                    <span aria-hidden="true">Tom Cook</span>
+                    <span className="sr-only">Tu Perfil</span>
+                    <span aria-hidden="true">Nombre de persona </span>
                   </a>
                 </li>
               </ul>
