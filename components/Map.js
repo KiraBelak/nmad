@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import axios from 'axios';
+import { Popup } from 'react-map-gl';
+
 
 // Importa los estilos CSS de Mapbox GL
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -59,15 +61,29 @@ useEffect(() => {
     
         // console.log(e);
 
-        //hacer el marcador clickeable
-
+        //si la experiencia esta activa
+        
 
         // Crea el marcador personalizado en el mapa
-        new mapboxgl.Marker(markerElement)
+       const marker= new mapboxgl.Marker(markerElement)
           .setLngLat([e.long, e.lat])
           .addTo(newMap);
-          //hacer el marcador clickeable
-          
+
+          const popup = new mapboxgl.Popup({
+            offset: 25, // Ajusta la posición del pop-up con respecto al marcador
+            className:"text-black text-center"
+          })
+            .setHTML(`
+              <h3>${e.titulo}</h3>
+              <p class="text-">${e.descripcion}</p>
+              <br/>
+              <a href="/experiencia/${e.id}" class="bg-blue-500 hover:bg-blue-700 mt-8 text-white font-bold py-2 px-4 rounded">
+              Ver experiencia
+            </a>
+            `);
+      
+          // Asocia el pop-up con el marcador
+          marker.setPopup(popup);
 
         
     });

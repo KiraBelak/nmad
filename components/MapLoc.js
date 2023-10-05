@@ -79,7 +79,7 @@ getExp();
   return (
     <div>
     
-      {location.latitude !== 0 && location.longitude !== 0 && (
+      {location.latitude !== 0 && location.longitude !== 0 && experiencias.length > 0 &&(
         <Map latitude={location.latitude} longitude={location.longitude} experiencias={experiencias} />
       )}
     </div>
