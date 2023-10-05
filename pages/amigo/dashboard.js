@@ -23,6 +23,7 @@ function Dashboard() {
     const [categoria, setCategoria] = useState("");
     const [ubicacion, setUbicacion] = useState("");
     const [load, setLoad] = useState(false);
+    const[precio, setPrecio] = useState(0)
 
 
   const { data: session, status } = useSession();
@@ -99,6 +100,7 @@ function Dashboard() {
                 descripcion,
                 imagen : imagenUrl,
                 categoria,
+                precio,
                 ubicacion,
                 email: session.user.email,
             }).then((res) => {
@@ -195,6 +197,7 @@ function Dashboard() {
                           type="text"
                           name="titulo"
                           id="titulo"
+                          placeholder="Dumas de samalayuca"
                           onChange={(e) => setTitle(e.target.value)}
                           className="shadow-sm focus:ring-indigo-500 py-2 px-4 focus:border-indigo-500 block w-full sm:text-sm  border border-gray-500 rounded-md"
                         />
@@ -211,6 +214,23 @@ function Dashboard() {
                           className="shadow-sm mb-2 px-2 py-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm  border border-gray-500 rounded-md"
                         />
                       </div>
+
+                        {/* input de precio */}
+                        <div className="mt-2 text-black font-bold">
+                            <label className="mb-2" htmlFor="precio">
+                                Precio
+                            </label>
+                            <input
+                                type="number"
+                                name="precio"
+                                id="precio"
+                                placeholder="100"
+                                onChange={(e) => setPrecio(e.target.value)}
+                                className="shadow-sm focus:ring-indigo-500 py-2 px-4 focus:border-indigo-500 block w-full sm:text-sm  border border-gray-500 rounded-md"
+                            />
+                        </div>
+
+
                       <div className="mt-2 text-black font-bold">
                         <label className="mb-2" htmlFor="imagen">
                           Imagen

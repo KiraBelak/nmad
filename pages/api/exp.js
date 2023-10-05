@@ -67,6 +67,7 @@ export default async function handler(req, res) {
                     long: body.ubicacion.longitude,
                     categoria: body.categoria,
                     img : body.imagen,
+                    precio : body.precio,
                 }
                 // console.log(expi);
                 //buscar el usuario por el email
