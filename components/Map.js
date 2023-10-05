@@ -105,7 +105,7 @@ useEffect(() => {
   };
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '600px' }}>
+    <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
     <div id="map" style={{ width: '100%', height: '100%' }} />
     <button
       onClick={resetMapView}
