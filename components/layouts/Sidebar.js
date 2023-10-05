@@ -19,6 +19,8 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import Skeleton from 'react-loading-skeleton';
+
 
 
 
@@ -46,7 +48,7 @@ export default function Example({children}) {
   const router = useRouter();
 
   if (status === "loading") {
-    return <div>Loading...</div>;
+    return <Skeleton count={1} height={40} />;
   }
 
   if (status === "unauthenticated") {
@@ -237,18 +239,93 @@ export default function Example({children}) {
                   </ul>
                 </li>
                 <li className="-mx-6 mt-auto">
-                  <a
-                    href="#"
-                    className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800"
-                  >
-                    <img
-                      className="h-8 w-8 rounded-full bg-gray-800"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
-                    <span className="sr-only">Tu Perfil</span>
-                    <span aria-hidden="true">Nombre de persona </span>
-                  </a>
+                 
+                <Menu as="div" className="relative">
+  <Menu.Button className="flex w-full items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800">
+    <img
+      className="h-8 w-8 rounded-full bg-gray-800"
+      src={session.user.image}
+      alt=""
+    />
+    <span className="sr-only">Tu Perfil</span>
+    <span aria-hidden="true">{session.user.name}</span>
+  </Menu.Button>
+  <Transition
+    as={Fragment}
+    enter="transition ease-out duration-100"
+    enterFrom="transform opacity-0 scale-95"
+    enterTo="transform opacity-100 scale-100"
+    leave="transition ease-in duration-75"
+    leaveFrom="transform opacity-100 scale-100"
+    leaveTo="transform opacity-0 scale-95"
+  >
+    <Menu.Items className="absolute right-0 z-10 mt-2.5 w-32 origin-bottom-left rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none bottom-full">
+    {/* {userNavigation.map((item) => (
+                      <Menu.Item key={item.name}>
+                        {({ active }) => (
+                          <a
+                            href={item.href}
+                            className={classNames(
+                              active ? "bg-gray-50" : "",
+                              "block px-3 py-1 text-sm leading-6 text-gray-900"
+                            )}
+                          >
+                            {item.name}
+                          </a>
+                        )}
+                      </Menu.Item>
+                    ))} */}
+                    {/* si es admin mostrar la opcion para ir a admin */}
+                    {session.user.roles.includes("admin") && (
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          href="/admin/dashboard"
+                          className={classNames(
+                            active ? "bg-gray-50" : "",
+                            "block px-3 py-1 text-sm leading-6 text-gray-900"
+                          )}
+                        >
+                          Admin
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    )}
+
+                    {session.user.roles.includes("amigo") && (
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          href="/amigo/dashboard"
+                          className={classNames(
+                            active ? "bg-gray-50" : "",
+                            "block px-3 py-1 text-sm leading-6 text-gray-900"
+                          )}
+                        >
+                          Amigo
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    )}
+                          
+
+                    
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          onClick={() => logout()}
+                          className={classNames(
+                            active ? "bg-gray-50" : "",
+                            "block px-3 py-1 text-sm w-full text-start leading-6 text-gray-900"
+                          )}
+                        >
+                          Salir
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
                 </li>
               </ul>
             </nav>
