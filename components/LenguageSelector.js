@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 
 export default function LenguageSelector(){
     const router = useRouter();
-    console.log(router);
+    
 
         // e de evento
         const changeLang = (e) => {
