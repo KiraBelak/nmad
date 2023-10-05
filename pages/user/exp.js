@@ -30,8 +30,11 @@ export default function Exp() {
 
     <div className="relative">
     <div class="w-full h-[600px] bg-white">  
-
     <div class="relative top-8 left-14 w-52 h-60 rounded-xl  bg-red-100">
+    <img src="/imgExp/sanCarlos.jpg" alt="" class="w-full h-44 sm:h-60 rounded-xl" />
+    <p class="absolute bottom-8 left-3 text-sm  text-white px-2 py-1 font-bold">
+    <div id="linea" class="w-32 h-1 bg-white"></div>
+     MIRADOR PARANOMICO SAN CARLOS</p>
     </div>
 
     <div class="relative bottom-52 left-72 w-52 h-60 rounded-xl   bg-red-100">
