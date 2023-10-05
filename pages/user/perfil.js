@@ -48,12 +48,15 @@ const getData = async()=>{
     
     
 }
-getData()
+
+
+
 
 
 
     return(
         <>
+        <button onClick={getData}>Probar api </button>
         </>
     )
 }
