@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import SideBar from "@/components/layouts/Sidebar";
 import axios from 'axios';
+import { FaPlaneDeparture } from "react-icons/fa";
 
 
 function Reserva() {
@@ -55,7 +56,10 @@ function Reserva() {
     }, [session, reserva]);
 
     if (status === 'loading' || reserva === null ||  load === true) {
-        return <div>Cargando...</div>;
+        return <div className="flex justify-center items-center bg-black h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"> <FaPlaneDeparture></FaPlaneDeparture> </div>
+      </div>
+       ;
     }
 
 
