@@ -21,7 +21,35 @@ export default async function handler(req, res) {
         case "POST":
             try {
 
-                console.log(body);
+                // console.log(body);
+                const id = uuidv4();
+                const expi ={
+                    id: id,
+                    titulo: body.title,
+                    descripcion: body.descripcion,
+                    lat: body.ubicacion.latitude,
+                    long: body.ubicacion.longitude,
+                    categoria: body.categoria,
+                }
+                // console.log(expi);
+                //buscar el usuario por el email
+                const experiencias = await exp.findOne({ email: body.email })
+        
+
+                //si no existe el usuario, crearlo
+                if (!experiencias) {
+                    await exp.insertOne({
+                        email: body.email,
+                        exp: [expi],
+                    });
+                } else {
+                    //si existe, agregar la experiencia
+                    await exp.updateOne(
+                        { email: body.email },
+                        { $push: { exp: expi } }
+                    );
+                }
+
 
                 //crear un dato en la coleccion
                 // const data = await exp.insertOne({
@@ -29,8 +57,9 @@ export default async function handler(req, res) {
                 //     id: uuidv4(),
                 // });
 
-                res.status(201).json({ success: true, data: data });
+                res.status(201).json({ success: true, data: "se creo" });
             } catch (error) {
+                console.log(error);
                 res.status(400).json({ success: false });
             }
             break;
