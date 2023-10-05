@@ -74,8 +74,11 @@ useEffect(() => {
             className:"text-black text-center"
           })
             .setHTML(`
-              <h3>${e.titulo}</h3>
-              <p class="text-">${e.descripcion}</p>
+              <div class="flex">
+              <img class="w-20 h-20 object-cover rounded-full" src="${e.img}" alt="${e.titulo}" />
+              <h3 class="text-lg font-bold">${e.titulo}</h3>
+              </div>
+              <p class="text-xs">${e.descripcion}</p>
               <br/>
               <a href="/experiencia/${e.id}" class="bg-blue-500 hover:bg-blue-700 mt-8 text-white font-bold py-2 px-4 rounded">
               Ver experiencia
