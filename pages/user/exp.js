@@ -140,13 +140,24 @@ Descubre una experiencia enriquecedora que te conectará con el pasado y te perm
           <div class="w-full h-[600px] bg-[#ffffff] flex items-center justify-around pl-4 ">
           <div class=" w-80 h-96 bg-[#CCFFE5] ">
           <p class="absolute bottom-10 sm:bottom-72 left-0 sm:left-16 text-1xl text-black px-2 py-1 font-bold">
-      Nmado disponibles:
+      Nmados disponibles:
       <div id="linea" class="w-60 h-1 bg-white"></div>
     </p>
-    <p class="absolute bottom-40 left-[515px]  text-lg  text-black px-2  py-6">
+    <img
+        src="/imgExp/imagen1.jpg"
+        alt=""
+        class=" w-24 h-24 absolute left-[530px] bottom-44 rounded-s-full"
+            />
+    <p class="absolute bottom-32 left-[518px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
      Jaime Sánchez
     </p>
-    <p class="absolute bottom-[310px] left-[520px]  text-lg  text-black px-2  py-6">
+
+    <img
+        src="/imgExp/imagen2.jpg"
+        alt=""
+        class=" w-24 h-24 absolute left-[530px] bottom-[370px] rounded-s-full"
+            />
+    <p class="absolute bottom-[310px] left-[520px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
      Jaime Sánchez
     </p> 
           </div>
