@@ -1,9 +1,23 @@
 import React from "react"
+import LenguageSelector from "../components/LenguageSelector"
 
-export default function contact(){
+export default function contact(props){
+    const { Prueba1 } = props;
     return (
         <div>
-            <h1>Paguina de prueba 1 , wey por que estas chquendo los commits?</h1>
+            <h1>{Prueba1.title}</h1>
+            <LenguageSelector />
         </div>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    const response = await import(`../lang/${locale}.json`)
+    // console.log(response.default.Prueba1);
+
+    return {
+        props: {
+            Prueba1: response.default.Prueba1,
+        }
+    }
 }

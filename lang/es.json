@@ -1,5 +1,8 @@
 {
-    "example": {
-        "title": "Viaja al precio mas bajo y haz amigos en cada destino"
+    "Prueba1": {
+        "title": "Paguina de prueba 1 , wey por que estas chquendo los commits?"
+    },
+    "home": {
+        "welcome": "Bienvenido a Next.js"
     }
 }
