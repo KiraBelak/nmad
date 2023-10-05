@@ -18,7 +18,7 @@ function LocationMap() {
 
   const getExp = async () => {
     const res = await axios.get('/api/exp').then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setExperiencias(res.data.data);
     }).catch((err) => {
         // console.log(err);
@@ -77,7 +77,7 @@ getExp();
   }
 
   return (
-    <div>
+    <div className='h-screen w-full box-border pb-16 lg:pb-0 '>
     
       {location.latitude !== 0 && location.longitude !== 0 && experiencias.length > 0 &&(
         <Map latitude={location.latitude} longitude={location.longitude} experiencias={experiencias} />

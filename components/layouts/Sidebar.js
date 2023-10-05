@@ -324,6 +324,22 @@ export default function Example({children}) {
                       )}
                     </Menu.Item>
                     )}
+
+                    {session.user.roles.includes("amigo") && (
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          href="/amigo/dashboard"
+                          className={classNames(
+                            active ? "bg-gray-50" : "",
+                            "block px-3 py-1 text-sm leading-6 text-gray-900"
+                          )}
+                        >
+                          Amigo
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    )}
                           
 
                     
@@ -346,7 +362,7 @@ export default function Example({children}) {
         </div>
 
         <main className="lg:pl-72">
-          <div className="px-1 box-border sm:px-6 lg:px-8">
+          <div className="px-1 pb-4 box-border sm:px-6 lg:px-8">
             {children}
           </div>
         </main>
