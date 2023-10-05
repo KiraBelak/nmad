@@ -12,6 +12,17 @@ export default async function handler(req, res) {
             try {
                 //traer todos los datos de la coleccion
                 const data = await exp.find({}).toArray();
+                //si existe el query.id, traer solo ese dato
+                if (query.id) {
+                    //de los datos, filtrar el que tenga el id del query
+                    const dato = data.filter((item) => item.id === query.id);
+                    //si existe el dato, devolverlo
+                    if (dato.length > 0) {
+                        return res.status(200).json({ success: true, data: dato });
+                    }
+
+                }
+
 
                 res.status(200).json({ success: true, data: data });
             } catch (error) {

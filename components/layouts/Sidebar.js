@@ -25,8 +25,8 @@ import Skeleton from 'react-loading-skeleton';
 
 
 const navigation = [
-  { name: 'Inicio', href: '#', icon: HomeIcon, current: true },
-  { name: 'Nomadas', href:'/user/exp/', icon: UsersIcon, current: false },
+  { name: 'Inicio', href: '/user/dashboard', icon: HomeIcon, current: true },
+  { name: 'Amigos Locales', href:'/user/nomadas', icon: UsersIcon, current: false },
   { name: 'Experiencias', href: '#', icon: FolderIcon, current: false },
   { name: 'Calendario', href: '#', icon: CalendarIcon, current: false }, //nombres de las categorias
 
@@ -121,13 +121,13 @@ export default function Example({children}) {
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
                   <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring-1 ring-white/10">
-                    <div className="flex h-16 shrink-0 items-center">
+                    <Link href='/' className="flex h-16 shrink-0 items-center">
                       <img
                         className="h-8 w-auto"
                         src="/logo.png"
                         alt="Your Company"
                       />
-                    </div>
+                    </Link>
                     <nav className="flex flex-1 flex-col">
                       <ul role="list" className="flex flex-1 flex-col gap-y-7">
                         <li>
@@ -186,13 +186,13 @@ export default function Example({children}) {
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
-            <div className="flex h-16 shrink-0 items-center">
+            <Link href='/' className="flex h-16 shrink-0 items-center">
               <img
                 className="h-8 w-auto"
                 src="/logo.png"
                 alt="Your Company"
               />
-            </div>
+            </Link>
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
                 <li>
