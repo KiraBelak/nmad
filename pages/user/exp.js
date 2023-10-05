@@ -38,18 +38,38 @@ export default function Exp() {
     </div>
 
     <div class="relative bottom-52 left-72 w-52 h-60 rounded-xl   bg-red-100">
+    <img src="/imgExp/Laguna.jpg" alt="" class="w-full h-44 sm:h-60 rounded-xl" />
+    <p class="absolute bottom-12 left-3 text-sm  text-white px-2 py-1 font-bold">
+    <div id="linea" class="w-32 h-1  bg-white"></div>
+    LA LAGUNA DE NAINARI</p>   
     </div>
 
     <div class="relative bottom-[446px] left-2/3 w-52 h-60 rounded-xl   bg-red-100">
+    <img src="/imgExp/coco.jpg" alt="" class="w-full h-44 sm:h-60 rounded-xl" />
+    <p class="absolute bottom-12 left-3 text-sm  text-white px-2 py-1 font-bold">
+    <div id="linea" class="w-32 h-1  bg-white"></div>
+    COCORIT</p>  
     </div>
 
     <div class="relative bottom-[412px] left-2/3 w-52 h-60 rounded-xl  bg-red-100">
+    <img src="/imgExp/ECO.jpg" alt="" class="w-full h-44 sm:h-60 rounded-xl" />
+    <p class="absolute bottom-12 left-3 text-sm  text-white px-2 py-1 font-bold">
+    <div id="linea" class="w-32 h-1  bg-white"></div>
+    ECO CAMP INN</p>  
     </div>
 
     <div class="relative bottom-[655px] left-72 w-52 h-60 rounded-xl  bg-red-100">
+    <img src="/imgExp/ESTADIO2.jpg" alt="" class="w-full h-44 sm:h-60 rounded-xl" />
+    <p class="absolute bottom-12 left-3 text-sm  text-white px-2 py-1 font-bold">
+    <div id="linea" class="w-32 h-1  bg-white"></div>
+    ESTADIO DE LOS YAQUIS</p>  
     </div>
 
     <div class="relative bottom-[895px] left-14 w-52 h-60 rounded-xl  bg-red-100">
+    <img src="/imgExp/GALICIA.jpg" alt="" class="w-full h-44 sm:h-60 rounded-xl" />
+    <p class="absolute bottom-12 left-3 text-sm  text-white px-2 py-1 font-bold">
+    <div id="linea" class="w-32 h-1  bg-white"></div>
+    GALICIA OUTDOORS</p>
     </div>
 
     </div>
