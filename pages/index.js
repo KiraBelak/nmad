@@ -13,10 +13,10 @@ import {
 import LoginBtn from '@/components/LoginBtn'
 
 const navigation = [
-  // { name: 'Product', href: '#' },
-  // { name: 'Features', href: '#' },
-  // { name: 'Marketplace', href: '#' },
-  // { name: 'Company', href: '#' },
+   { name: 'Conocenos Nomas', href: '#' },
+   { name: 'Amigo en cualquier lugar', href: '#' },
+   { name: 'Conoce ese lugar especial', href: '#' },
+   { name: 'Busqueda de lugares', href: '#' },
 ]
 const features = [
   {
