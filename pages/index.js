@@ -232,10 +232,14 @@ export default function Example() {
               </div>
               <div className="text-center">
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Viaja al precio mas bajo y haz amigos en cada destino
+                  Encuentra amigos en cada destino
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                Transforma tus viajes en experiencias inolvidables al conectar nómadas digitales con locales: evita impuestos y forja amistades por todo el mundo
+                  ¿Ganas de conocer lugares nuevos, pero no tienes con quien? Conoce a alguien que te acompañe en tu
+                  aventura.
+                  <br />
+                  Nmad te ofrece experiencias inonlvidables con bajo presupuesto.
+                
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <LoginBtn/>
