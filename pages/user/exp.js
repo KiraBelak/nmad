@@ -145,18 +145,18 @@ Descubre una experiencia enriquecedora que te conectará con el pasado y te perm
     <img
         src="/imgExp/imagen2.jpg"
         alt=""
-        class=" w-20 h-20 absolute left-10 bottom-14 rounded-full border-dashed border-2 border-green-900"   
+        class=" w-20 h-20 absolute left-10  lg:left-[450px] bottom-14 lg:bottom-14 rounded-full border-dashed border-2 border-green-900"   
             />
-             <p class="absolute bottom-8 left-12 text-[10px]  text-black px-1 bg-green-200 rounded">
+             <p class="absolute bottom-8 left-12 lg:left-[465px] text-[10px]  text-black px-1 bg-green-200 rounded">
      Jessica Diaz
     </p>
 
     <img
         src="/imgExp/imagen1.jpg"
         alt=""
-        class=" w-20 h-20 absolute left-48 bottom-14 rounded-full border-dashed border-2 border-green-900"   
+        class=" w-20 h-20 absolute left-48 lg:left-32 bottom-14 rounded-full border-dashed border-2 border-green-900"   
             />
-            <p class="absolute bottom-8 left-[200px] text-[10px]  text-black px-1 bg-green-200 rounded">
+            <p class="absolute bottom-8 left-[200px] lg:left-[135px] text-[10px]  text-black px-1 bg-green-200 rounded">
      Jose luis Diaz
     </p>
 
