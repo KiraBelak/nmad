@@ -8,48 +8,19 @@ export default async function handler(req, res) {
     const db = client.db();
     const reserva= db.collection("reserva");
     switch (method) {
-        // case "GET":
-            // try {
-            //     //traer todos los datos de la coleccion
-            //     const data = await exp.find({}).toArray();
-            //     //si existe el query.id, traer solo ese dato
+        case "GET":
+                try {
+                    //traer todos los datos de la coleccion que el email sea igual al email que se esta pasando por query
+                    console.log(query.email);
+                    const data = await reserva.find({ usuario: query.email }).toArray();
+                    console.log(data);
+                    res.status(200).json({ success: true, data: data });
+                } catch (error) {
+                    console.log(error);
+                    res.status(400).json({ success: false });
+                }
 
-                
-            //     if (query.id) {
-            //         //de los datos, filtrar el que tenga el id del query
-            //         //el id convertirlo a numero
-            //         // const ide = parseInt(query.id);
-            //         const dato = []
-            //         data.forEach((element) => {
-            //             element.exp.forEach((e) => {
-            //                 // console.log(e);
-            //                 // const id = parseInt(e.id);
-            //                 if (e.id == query.id) {
-            //                     const email = element.email;
-            //                     //traer el usuario
-            //                     const user = users.find({email: email});
-            //                     return res.status(200).json({ success: true, data: e, user: user });
-
-            //                 }
-            //             })
-            //         })
-            //         //si existe el dato, devolverlo
-            //         if (dato.length > 0) {
-            //             return res.status(200).json({ success: true, data: dato });
-            //         }
-                    
-
-            //     }else{
-            //        return res.status(200).json({ success: true, data: data });
-
-            //     }
-
-
-            // } catch (error) {
-            //     console.log(error);
-            //     res.status(400).json({ success: false });
-            // }
-            // break;
+            break;
         case "POST":
             try {
 

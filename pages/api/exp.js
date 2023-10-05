@@ -23,7 +23,7 @@ export default async function handler(req, res) {
                     // const ide = parseInt(query.id);
                     const dato = []
                     data.forEach((element) => {
-                        console.log(element);
+                        // console.log(element);
                         element.exp.forEach(async(e) => {
                             // console.log(e);
                             // const id = parseInt(e.id);
