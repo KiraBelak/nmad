@@ -16,8 +16,8 @@ export default function Fotos() {
       `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
       formData
     );
-    console.log(res);
-    console.log(res.data.secure_url);
+    // console.log(res);
+    // console.log(res.data.secure_url);
     setImg(res.data.secure_url)
 
 

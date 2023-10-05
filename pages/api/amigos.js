@@ -8,7 +8,6 @@ export default async function handler(req, res) {
     const db = client.db();
     const exp= db.collection("exp");
     const users = db.collection("users");
-
     switch (method) {
         case "GET":
             try {
@@ -23,17 +22,15 @@ export default async function handler(req, res) {
                     // const ide = parseInt(query.id);
                     const dato = []
                     data.forEach((element) => {
-                        console.log(element);
-                        element.exp.forEach(async(e) => {
+                        element.exp.forEach((e) => {
                             // console.log(e);
                             // const id = parseInt(e.id);
                             if (e.id == query.id) {
                                 const email = element.email;
                                 //traer el usuario
-                                const user =await users.findOne({email: email});
-                                // console.log(user);
-                                
+                                const user = users.find({email: email});
                                 return res.status(200).json({ success: true, data: e, user: user });
+
                             }
                         })
                     })
