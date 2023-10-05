@@ -33,11 +33,11 @@ function Dashboard() {
         .get("/api/exp")
         .then((res) => {
           const data = res.data.data;
-          console.log(data);
+          // console.log(data);
 
           //tomar las experiencias del usuario
           const exp = data.filter((e) => e.email === session.user.email);
-          console.log(exp);
+          // console.l og(exp);
 
           // console.log(exp);
 
