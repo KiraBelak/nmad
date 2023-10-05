@@ -52,6 +52,25 @@ function Dashboard() {
     getExp();
   }, []);
 
+
+    const subirFoto = async () => {
+      const formData = new FormData();
+    formData.append("file", imagen);
+    // formData.append("folder", "images");
+    formData.append("upload_preset", "s0uookdo");
+    const res = await axios.post(
+      `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
+      formData
+    );
+    // console.log(res);
+    // console.log(res.data.secure_url);
+    // setImg(res.data.secure_url)
+
+      return res.data.secure_url;
+
+    }
+
+
     const handleExp = async () => {
         try {
             //si no hay algun campo lleno no se puede crear la experiencia
@@ -59,19 +78,24 @@ function Dashboard() {
                 title.trim() === "" ||
                 descripcion.trim() === "" ||
                 categoria.trim() === "" ||
-                ubicacion.length === 0
+                ubicacion.length === 0 ||
+                imagen.length === 0
             ) {
                 toast.error("Todos los campos son obligatorios");
                 return;
             }
 
             await setLoad(true);
+
+            //subir la imagen a cloudinary
+            const imagenUrl = await subirFoto();
+
             // console.log("wenas")
             // console.log(title, descripcion, imagen, categoria, ubicacion);
             const res = await axios.post("/api/exp", {
                 title,
                 descripcion,
-                imagen,
+                imagen : imagenUrl,
                 categoria,
                 ubicacion,
                 email: session.user.email,
@@ -84,6 +108,7 @@ function Dashboard() {
                 setImagen("");
                 setCategoria("");
                 setUbicacion("");
+                setImagen("");
                 setLoad(false);
 
 
@@ -184,7 +209,7 @@ function Dashboard() {
                           className="shadow-sm mb-2 px-2 py-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm  border border-gray-500 rounded-md"
                         />
                       </div>
-                      {/* <div className="mt-2 text-black font-bold">
+                      <div className="mt-2 text-black font-bold">
                         <label className="mb-2" htmlFor="imagen">
                           Imagen
                         </label>
@@ -192,10 +217,10 @@ function Dashboard() {
                           type="file"
                           name="imagen"
                           id="imagen"
-                            onChange={(e) => setImagen(e.target.value)}
+                            onChange={(e) => setImagen(e.target.files[0])}
                           className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm  border border-gray-500 rounded-md"
                         />
-                      </div> */}
+                      </div>
                       {/* ubicacion */}
                       <SelectMap setUbicacion={setUbicacion} />
 
@@ -280,7 +305,7 @@ function Dashboard() {
             >
               <img
                 className="w-full h-56 object-cover object-center"
-                src={exp.imagen}
+                src={exp.img}
                 alt={exp.title}
               />
 
