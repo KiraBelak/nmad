@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 //importar icono de avion
 import { FaPlaneDeparture } from "react-icons/fa";
+import { v4 as uuidv4 } from "uuid";
+import { useSession } from "next-auth/react";
+import toast from "react-hot-toast";
 
 /*
   This example requires some changes to your config:
@@ -19,103 +22,193 @@ import { FaPlaneDeparture } from "react-icons/fa";
   ```
 */
 const features = [
-    {
-      name: 'Durable',
-      description: 'The leather cover and machined steel disc binding stand up to daily use for years to come.',
-    },
-    {
-      name: 'Refillable',
-      description: 'Buy it once and refill as often as you need. Subscribe and save on routine refills.',
-    },
-    {
-      name: 'Thoughtfully designed',
-      description:
-        'The comfortable disc binding allows you to quickly rearrange pages or combine lined, graph, and blank refills.',
-    },
-    { name: 'Locally made', description: 'Responsibly and sustainably made real close to wherever you are, somehow.' },
-  ]
-  
-  export default function Example() {
-    const [datitos, setDatitos] = useState(null);
-    const [amigo, setAmigo] = useState(null);
+  {
+    name: "Durable",
+    description:
+      "The leather cover and machined steel disc binding stand up to daily use for years to come.",
+  },
+  {
+    name: "Refillable",
+    description:
+      "Buy it once and refill as often as you need. Subscribe and save on routine refills.",
+  },
+  {
+    name: "Thoughtfully designed",
+    description:
+      "The comfortable disc binding allows you to quickly rearrange pages or combine lined, graph, and blank refills.",
+  },
+  {
+    name: "Locally made",
+    description:
+      "Responsibly and sustainably made real close to wherever you are, somehow.",
+  },
+];
 
-    useEffect(() => {
-      // console.log(datitos);
-    }, [datitos])
-
-
-    const router = useRouter();
-    const { id } = router.query;
-
-    useEffect(() => {
-      const res = async () => {
-        //si id es undefined, no hacer nada
-        if (id===undefined || datitos != null ) return;
-
-        const response = await fetch(`/api/exp?id=${id}`);
-        const data = await response.json();
-        return data;
-      }
-      res().then((data) => {
-        if (data === undefined) return;
-        // console.log(data);
-        setAmigo(data.user);
-        setDatitos(data.data);
-      })
-    }
-    ), [id];
+export default function Example() {
+  const [datitos, setDatitos] = useState(null);
+  const [amigo, setAmigo] = useState(null);
+  const [date, setDate] = useState(null);
+  const [time, setTime] = useState(null);
+  const { data: session } = useSession();
 
 
-    if (datitos === null) {
-      return (
-        <SideBar>
-          <div className="flex justify-center items-center h-screen">
-            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"> <FaPlaneDeparture></FaPlaneDeparture> </div>
-          </div>
-        </SideBar>
-      )
-    }
+  useEffect(() => {
+    // console.log(datitos);
+  }, [datitos]);
 
-    //funcion para cambiar la calidad de la imagen de drive cambiando el 96 por 1024 https://lh3.googleusercontent.com/a/ACg8ocImFvozZ7hEmfksWuDCsQ7Xnmwet1P4S25368867P-GUA=s1024-c
-    const cambiarCalidad = (url) => {
-      const url2 = url.split("=s96-c")[0];
-      const url3 = url2 + "=s1024-c";
-      return url3;
-    }
+  const router = useRouter();
+  const { id } = router.query;
 
+  useEffect(() => {
+    const res = async () => {
+      //si id es undefined, no hacer nada
+      if (id === undefined || datitos != null) return;
 
+      const response = await fetch(`/api/exp?id=${id}`);
+      const data = await response.json();
+      return data;
+    };
+    res().then((data) => {
+      if (data === undefined) return;
+      // console.log(data);
+      setAmigo(data.user);
+      setDatitos(data.data);
+    });
+  }),
+    [id];
 
-
+  if (datitos === null) {
     return (
-      <SideBar >
-        <section aria-labelledby="features-heading" className="relative bg-gray-200">
-          <div className="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-16">
-            <img
-              src={datitos.img}
-              alt="Black leather journal with silver steel disc binding resting on wooden shelf with machined steel pen."
-              className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-            />
+      <SideBar>
+        <div className="flex justify-center items-center h-screen">
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900">
+            {" "}
+            <FaPlaneDeparture></FaPlaneDeparture>{" "}
           </div>
-  
-          <div className="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 sm:pb-32 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-32">
-            <div className="lg:col-start-2">
-             
-              <p className="mt-4 text-4xl font-bold tracking-tight text-gray-900">{datitos.titulo}</p>
-              <p className="mt-4 text-gray-500">
-               {datitos.descripcion}
+        </div>
+      </SideBar>
+    );
+  }
+
+  //funcion para cambiar la calidad de la imagen de drive cambiando el 96 por 1024 https://lh3.googleusercontent.com/a/ACg8ocImFvozZ7hEmfksWuDCsQ7Xnmwet1P4S25368867P-GUA=s1024-c
+  const cambiarCalidad = (url) => {
+    const url2 = url.split("=s96-c")[0];
+    const url3 = url2 + "=s1024-c";
+    return url3;
+  };
+
+    //handle submit de reservar
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      toast.loading("Reservando...");
+      //cuidar que no haya campos vacios
+      if (date === null || time === null) {
+        return toast.error("Selecciona una fecha y hora");
+      }
+
+        //armar el objeto de la reservacion
+        const reservacion = {
+            id: uuidv4(),
+            fecha: date,
+            hora: time,
+            experiencia: datitos.id,
+            usuario: session.user.email,
+            status: "pendiente",
+        }
+
+        console.log(reservacion);
+
+        //hacer el post
+        const response = await fetch("/api/reserva", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(reservacion),
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          toast.dismiss();
+            toast.success("Reservación exitosa");
+            router.push("/reservaciones");
+        } else {
+          toast.dismiss();
+            toast.error("Algo salió mal");
+        }
+
+
+
+    }
+
+
+
+  return (
+    <SideBar>
+      <section
+        aria-labelledby="features-heading"
+        className="relative bg-gray-200"
+      >
+        <div className="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-16">
+          <img
+            src={datitos.img}
+            alt="Black leather journal with silver steel disc binding resting on wooden shelf with machined steel pen."
+            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+          />
+        </div>
+
+        <div className="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 sm:pb-32 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-32">
+          <div className="lg:col-start-2">
+            <p className="mt-4 text-4xl font-bold tracking-tight text-gray-900">
+              {datitos.titulo}
+            </p>
+            <p className="mt-4 text-gray-500">{datitos.descripcion}</p>
+            <p className="text-black"> $ {datitos.precio ? (datitos.precio * 1.15).toFixed(2) : 800} MXN</p>
+            <div className="mt-16 space-y-4">
+              <div className="flex text-black flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <div className="relative flex-1">
+                  <input
+                    type="date"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 shadow-sm text-sm"
+                    onChange={(e) => {
+                      setDate(e.target.value);
+                    }
+                    }
+                  />
+                </div>
+                <div className="relative flex-1">
+                  <input
+                    type="time"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 shadow-sm text-sm"
+                    onChange={(e) => {
+                      setTime(e.target.value);
+                    }
+                    }
+                  />
+                </div>
+              </div>
+              <p className="mt-2 text-sm text-gray-500">
+                Selecciona una fecha y hora para reservar
               </p>
-  
-             
+
+              <button
+                onClick={handleSubmit}
+                className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Reservar
+              </button>
             </div>
           </div>
-          <div className="relative z-10 mt-32 bg-gray-900 pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
+        </div>
+        <div className="relative z-10 mt-8 bg-gray-900 pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
               <div
                 className="aspect-[1097/1023] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"
                 style={{
                   clipPath:
-                    'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
                 }}
               />
             </div>
@@ -130,6 +223,7 @@ const features = [
                 />
               </div>
             </div>
+
             <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
               <figure className="relative isolate pt-6 sm:pt-12">
                 <svg
@@ -145,9 +239,7 @@ const features = [
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                 </svg>
                 <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                  <p>
-                    &ldquo;{amigo.name}&rdquo;
-                  </p>
+                  <p>&ldquo;{amigo.name}&rdquo;</p>
                 </blockquote>
                 {/* <figcaption className="mt-8 text-base">
                   <div className="font-semibold text-white">Judith Black</div>
@@ -157,10 +249,7 @@ const features = [
             </div>
           </div>
         </div>
-        </section>
-
-        
-      </SideBar>
-    )
-  }
-  
+      </section>
+    </SideBar>
+  );
+}
