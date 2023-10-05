@@ -5,6 +5,7 @@ import { set } from 'date-fns';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
+import { FaPlaneDeparture } from "react-icons/fa";
 
 
 function LocationMap() {
@@ -84,7 +85,9 @@ getExp();
       {location.latitude !== 0 && location.longitude !== 0 && experiencias.length > 0 ?(
         <Map latitude={location.latitude} longitude={location.longitude} experiencias={experiencias} />
       ) : (
-       <Skeleton height={500} className='bg-black' />
+        <div className="flex justify-center items-center h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"> <FaPlaneDeparture></FaPlaneDeparture> </div>
+      </div>
        
       )
     
