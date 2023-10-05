@@ -1,0 +1,23 @@
+/* Estilo del contenedor del pop-up */
+.mapboxgl-popup {
+    max-width: 300px; /* Ancho máximo del pop-up */
+    padding: 10px;
+    background-color: #fff; /* Color de fondo del pop-up */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del pop-up */
+  }
+  
+  /* Estilo del título del pop-up */
+  .mapboxgl-popup h3 {
+    margin: 0;
+    font-size: 16px; /* Tamaño de fuente del título */
+    color: #333; /* Color del texto del título */
+  }
+  
+  /* Estilo del contenido del pop-up */
+  .mapboxgl-popup p {
+    margin-top: 5px;
+    font-size: 14px; /* Tamaño de fuente del contenido */
+    color: #666; /* Color del texto del contenido */
+  }
+  

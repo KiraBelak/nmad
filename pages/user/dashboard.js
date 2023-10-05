@@ -1,5 +1,5 @@
 import SideBar from "@/components/layouts/Sidebar";
-
+import MapLoc from "@/components/MapLoc";
 
 
 export default function Dashboard() {
@@ -8,7 +8,8 @@ export default function Dashboard() {
     return (
         <>
         <SideBar>
-Hola
+
+        <MapLoc/>
 
         </SideBar>
 
