@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function Fotos() {
   const [file, setFile] = useState(null);
+  const [img, setImg] = useState(null);
   const sube = async (e) => {
     console.log("click");
     const datos = "";
@@ -16,6 +17,8 @@ export default function Fotos() {
       formData
     );
     console.log(res);
+    console.log(res.data.secure_url);
+    setImg(res.data.secure_url)
 
 
     // const { data: cloudinaryData } = await axios.post(
@@ -47,10 +50,12 @@ export default function Fotos() {
       </button>
 
       <p></p>
-      <div id="divuploadedimage"></div>
+      <div id="divuploadedimage">
+        {img}
+      </div>
       <p></p>
 
-      <img id="uploadedimage" src="api/foto1.jpg"></img>
+      <img id="uploadedimage" src={img}></img>
     </>
   );
 }
