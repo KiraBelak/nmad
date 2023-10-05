@@ -51,12 +51,12 @@ export default function Exp() {
 
             <a
               href="/tu-enlace4"
-              class="relative bottom-52 left-72 sm:left-60 w-52 sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-52 left-[268px] w-52  h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/Laguna.jpg"
                 alt=""
-                class="w-full h-44 sm:h-60 sm:w-full rounded-xl"
+                class="w-full h-60 rounded-xl"
               />
               <p class="absolute bottom-12 left-3 text-sm text-white px-2 py-1 font-bold">
                 <div id="linea" class="w-32 h-1 bg-white"></div>
@@ -66,12 +66,12 @@ export default function Exp() {
 
             <a
               href="/tu-enlace5"
-              class="relative bottom-[446px] sm:bottom-[447px] left-2/3 w-52 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-[446px]  left-2/3 w-52 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/coco.jpg"
                 alt=""
-                class="w-full h-44 sm:h-60 rounded-xl"
+                class="w-full h-60  rounded-xl"
               />
               <p class="absolute bottom-12 left-3 text-sm text-white px-2 py-1 font-bold">
                 <div id="linea" class="w-32 h-1 bg-white"></div>
@@ -81,12 +81,12 @@ export default function Exp() {
 
             <a
               href="/tu-enlace"
-              class="relative bottom-[412px] sm:bottom-[430px] left-2/3 w-52 h-60 sm:h-56 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-[412px]  left-2/3 w-52 h-60  rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/ECO.jpg"
                 alt=""
-                class="w-full h-44 sm:h-60 rounded-xl"
+                class="w-full h-60 rounded-xl"
               />
               <p class="absolute bottom-12 left-3 text-sm text-white px-2 py-1 font-bold">
                 <div id="linea" class="w-32 h-1 bg-white"></div>
@@ -96,12 +96,12 @@ export default function Exp() {
 
             <a
               href="/tu-enlace1"
-              class="relative bottom-[655px] left-72 sm:left-60 w-52  sm:w-48 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-[655px] left-[270px] w-52 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/ESTADIO2.jpg"
                 alt=""
-                class="w-full h-44 sm:h-60 rounded-xl"
+                class="w-full h-60  rounded-xl"
               />
               <p class="absolute bottom-12 left-3 text-sm text-white px-2 py-1 font-bold">
                 <div id="linea" class="w-32 h-1 bg-white"></div>
@@ -111,12 +111,12 @@ export default function Exp() {
 
             <a
               href="/tu-enlace2"
-              class="relative bottom-[895px] left-14 sm:left-4 w-52 h-60 rounded-xl bg-red-100 block no-underline"
+              class="relative bottom-[895px] left-4 w-52 h-60 rounded-xl bg-red-100 block no-underline"
             >
               <img
                 src="/imgExp/GALICIA.jpg"
                 alt=""
-                class="w-full h-44 sm:h-60 rounded-xl"
+                class="w-full h-60  rounded-xl"
               />
               <p class="absolute bottom-12 left-3 text-sm text-white px-2 py-1 font-bold">
                 <div id="linea" class="w-32 h-1 bg-white"></div>
@@ -132,7 +132,7 @@ export default function Exp() {
           MUSEO SONORA REVOLUCION
                 <div id="linea" class="w-60 h-1 bg-white"></div>
               </p>
-              <p class="absolute bottom-24 sm:bottom-10 left-[330px] text-lg text-white px-10 py-6 sm:text-[13px] md:text-[13px]">
+              <p class="absolute bottom-[50px] left-[320px] text-lg text-white px-10 py-6">
               Este museo te invita a explorar la apasionante historia de la Revolución Mexicana. A través de una valiosa colección de piezas históricas resguardadas por descendientes del General Álvaro Obregón, podrás sumergirte en este período crucial de la historia de México.
 
 Cada objeto en exhibición cuenta una historia única, desde armas de la época hasta documentos originales y objetos personales de figuras destacadas. Estas piezas te llevarán al contexto histórico de la Revolución, permitiéndote comprender las luchas y los logros de quienes participaron en ella.
@@ -151,26 +151,26 @@ Descubre una experiencia enriquecedora que te conectará con el pasado y te perm
 
           <div class="w-full h-[600px] bg-[#ffffff] flex items-center justify-around pl-4 ">
           <div class=" w-80 h-96 bg-[#CCFFE5] ">
-          <p class="absolute bottom-10 sm:bottom-72 left-0 sm:left-16 text-1xl text-black px-2 py-1 font-bold">
+          <p class="absolute bottom-10 sm:bottom-72 left-16  text-1xl text-black px-2 py-1 font-bold">
       Nmados disponibles:
       <div id="linea" class="w-60 h-1 bg-white"></div>
     </p>
     <img
         src="/imgExp/imagen1.jpg"
         alt=""
-        class=" w-24 h-24 absolute left-[460px] bottom-44 rounded-s-full"
+        class=" w-24 h-24 absolute left-[550px] bottom-44 rounded-s-full"
             />
-    <button class="absolute bottom-32 left-[450px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
+    <button class="absolute bottom-32 left-[540px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
      Jaime Sánchez
     </button>
 
     <img
         src="/imgExp/imagen2.jpg"
         alt=""
-        class=" w-24 h-24 absolute left-[460px] bottom-[370px] rounded-s-full"
+        class=" w-24 h-24 absolute left-[550px] bottom-[370px] rounded-s-full"
             />
-    <button class="absolute bottom-[310px] left-[450px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
-     Jaime Sánchez
+    <button class="absolute bottom-[310px] left-[550px]  text-lg  text-black px-1  py-2 bg-green-500 rounded">
+     Ana Garcia
     </button> 
           </div>
           <div class=" w-80 h-96 pl-10 bg-[#CCFFE5] ">
