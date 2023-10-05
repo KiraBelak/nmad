@@ -15,14 +15,26 @@ export default function Exp() {
     <div class="absolute flex items-center justify-center w-72 h-52 bg-[#ffffff] rounded-3xl z-20">
         {/* Contenido blanco */}
         <p class= "absolute bottom-28 left-4 text-3xl text-black px-2 py-1 text-center pr-2 font-bold ">EXPERIENCIAS DE VIAJE UNICAS </p>
-        <button
-         class="relative none bottom-0 top-10 pl-40 rounded-lg bg-gradient-to-tr from-[#193300] to-[#33ff99] py-6  px-4  font-sans text-[4px]  font-bold uppercase text-white shadow-md shadow-green-950/40 transition-all hover:shadow-lg hover:shadow-green-950/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-          <div className="absolute flex flex-col items-center justify-center right-6 "></div> 
-          <div
-         class="absolute none bottom-0 left-10  rounded-lg bg-gradient-to-tr from-[#193300] to-[#33ff99] py-[14px]  px-14  font-sans text-[4px]  font-bold uppercase text-white shadow-md shadow-green-950/40 transition-all hover:shadow-lg hover:shadow-green-950/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-          <div className="relative flex flex-col items-center justify-center  center bg-cover w-6 h-[20px] object-cover "></div> 
-         </div>
-         </button>
+        <div className="relative">
+  <div className="flex items-center">
+    <input
+      type="text pt-10"
+      placeholder="donde buscas la experiencia?"
+      className=" mt-16 py-2 px-4 rounded-l-lg border border-gray-300  text-black text-[10px] focus:outline-none"
+    />
+    <button
+      className="bg-gradient-to-tr from-[#193300] to-[#33ff99] py-6 px-2 mt-16 rounded-r-lg font-sans text-[4px] font-bold uppercase text-black shadow-md shadow-green-950/40 transition-all hover:shadow-lg hover:shadow-green-950/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    >
+      <div className="flex flex-col items-center justify-center">
+      <img
+                src="/imgExp/busqueda.png"
+                alt=""
+                class="w-4 h-4  rounded-xl"
+              />
+      </div>
+    </button>
+  </div>
+</div>
     </div>
 </div>
 
