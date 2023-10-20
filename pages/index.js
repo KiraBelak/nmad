@@ -18,6 +18,7 @@ const navigation = [
   //  { name: 'Conoce ese lugar especial', href: '#' },
   //  { name: 'Busqueda de lugares', href: '#' },
 ]
+
 const features = [
   {
     name: 'Push to deploy.',
